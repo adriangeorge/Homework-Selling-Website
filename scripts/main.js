@@ -23,6 +23,32 @@ $('#cumpar').click(function () {
 
 });
 
+// Populeaza Plangeri
+$('#cumpar').click(function () {
+    function getData() {
+        spreadsheetId = '1Eyyp_is9zJISV0nQQNEPtuXI2StpwybwZtvNAKa_pR0';
+        range = 'Sheet1!A1:B'
+        gapi.client.sheets.spreadsheets.values.get({
+            spreadsheetId: spreadsheetId,
+            range: range
+        }).then((response) => {
+            var result = response.result;
+            var numRows = result.values ? result.values.length : 0;
+
+            const plangeri = result.values;
+            console.log(plangeri)
+            
+            plangeri.forEach(function (item, index) {
+                $('#plangeri').append("<div class=\"plangereUP\">" + plangeri[index][1] + "</div>");
+                $('#plangeri').append("<div class=\"plangereDOWN\">(" + plangeri[index][0] + ")</div>");
+                $('#plangeri').append("<br>");
+            });
+        });
+    };
+    getData();
+
+});
+
 // Trimite Plangere
 $('#sub').click(function () {
     function sendData() {
@@ -38,8 +64,8 @@ $('#sub').click(function () {
         }
         var values = [
             [
-               materie,
-               titlu
+                materie,
+                titlu
             ]
         ];
         var body = {
@@ -56,6 +82,4 @@ $('#sub').click(function () {
         });
     }
     sendData();
-
-
-    });
+});
