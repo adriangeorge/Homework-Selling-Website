@@ -1,0 +1,11 @@
+{
+    "web": {
+        "client_id":"992582732974-2ja3h4cfr0jeldjdmap4bh4lt8vvv149.apps.googleusercontent.com",
+        "project_id":"lsac-it-proba",
+        "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+        "token_uri":"https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret":"VrzyDwGpQs9mDaaP5SHPzSpx",
+        "javascript_origins":["https://adriangeorge.github.io"]
+    }
+}
