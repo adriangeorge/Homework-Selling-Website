@@ -1,4 +1,4 @@
-# LSAC-IT-Proba
+# Homework selling
 
 Am decis sa folosesc API-ul de la Google Sheets pentru a creea o pseudo baza de date
 
